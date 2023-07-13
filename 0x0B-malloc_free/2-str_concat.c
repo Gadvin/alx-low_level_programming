@@ -1,54 +1,42 @@
 #include "main.h"
 #include <stdlib.h>
-
 /**
- * str_concat - function to concanate 2 strings
- * @s1: String 1
- * @s2: String 2
- * Description: Function to concanate 2 strings
- * Return: 0 when no strings are passed
+ * str_concat - get ends of input and add together for size
+ * @s1: input one to concat
+ * @s2: input two to concat
+ * Return: concat of s1 and s2
  */
-
 char *str_concat(char *s1, char *s2)
 {
-	char *concat;
-	int i = 0, len1 = 0, len2 = 0, totalLen = 0;
+	char *conct;
+	int i, ci;
 
 	if (s1 == NULL)
 		s1 = "";
-
 	if (s2 == NULL)
 		s2 = "";
 
+	i = ci = 0;
 	while (s1[i] != '\0')
-		len1++;
+		i++;
+	while (s2[ci] != '\0')
+		ci++;
+	conct = malloc(sizeof(char) * (i + ci + 1));
 
-	i = 0;
-	while (s2[i] != '\0')
-		len2++;
-
-	totalLen = len1 + len2;
-	concat = malloc(sizeof(char) * (totalLen + 1));
-
-	if (concat == NULL)
+	if (conct == NULL)
 		return (NULL);
-
-	i = len1 = len2 =  0;
-
-	while (s1[len1] != '\0')
+	i = ci = 0;
+	while (s1[i] != '\0')
 	{
-		concat[i] = s1[i];
+		conct[i] = s1[i];
 		i++;
 	}
 
-	while (s2[len2] != '\0')
+	while (s2[ci] != '\0')
 	{
-		concat[i] = s2[len2];
-		i++;
-		len2++;
+		conct[i] = s2[ci];
+		i++, ci++;
 	}
-
-	concat[i] = '\0';
-
-	return (concat);
+	conct[i] = '\0';
+	return (conct);
 }

@@ -1,47 +1,54 @@
-#include "main.h"		
+#include "main.h"
 #include <stdlib.h>
 
+/**
+ * str_concat - function to concanate 2 strings
+ * @s1: String 1
+ * @s2: String 2
+ * Description: Function to concanate 2 strings
+ * Return: 0 when no strings are passed
+ */
 
-char *str_concat(char *s1, char *s2) {
-    char *concat;
-    int i = 0, len1 = 0, len2 = 0, totalLen = 0;
+char *str_concat(char *s1, char *s2)
+{
+	char *concat;
+	int i = 0, len1 = 0, len2 = 0, totalLen = 0;
 
-    /* Calculate the length of the first string, s1*/
-    while (s1[i] != '\0') {
-        len1++;
-    }
+	if (s1 == NULL)
+		s1 = "";
 
-    i = 0;
-    /* Calculate the length of the second string, s2*/
-    while (s2[i] != '\0') {
-        len2++;
-    }
+	if (s2 == NULL)
+		s2 = "";
 
-    totalLen = len1 + len2;
-    /* Allocate memory for the concatenated string*/
-    concat = malloc(sizeof(char) * (totalLen + 1));
+	while (s1[i] != '\0')
+		len1++;
 
-    if (concat == NULL)
-        return (NULL);
+	i = 0;
+	while (s2[i] != '\0')
+		len2++;
 
-    i = len1 = len2 =  0;
+	totalLen = len1 + len2;
+	concat = malloc(sizeof(char) * (totalLen + 1));
 
-    /* Copy the characters from s1 to concat*/
-    while (s1[len1] != '\0') {
-        concat[i] = s1[len1];
-        i++;
-        len1++;
-    }
+	if (concat == NULL)
+		return (NULL);
 
-    /* Copy the characters from s2 to concat*/
-    while (s2[len2] != '\0') {
-        concat[i] = s2[len2];
-        i++;
-        len2++;
-    }
+	i = len1 = len2 =  0;
 
-    concat[i] = '\0';
+	while (s1[i] != '\0')
+	{
+		concat[i] = s1[i];
+		i++;
+	}
 
-    return (concat);
+	while (s2[len2] != '\0')
+	{
+		concat[i] = s2[len2];
+		i++;
+		len2++;
+	}
+
+	concat[i] = '\0';
+
+	return (concat);
 }
-
