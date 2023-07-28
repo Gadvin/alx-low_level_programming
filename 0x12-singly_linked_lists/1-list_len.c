@@ -2,7 +2,7 @@
 #include "lists.h"
 
 /**
- * print_len - function to print all the items in a linked list
+ * list_len - function to print all the items in a linked list
  * @h: a pointer to the list_t list to print
  *
  * Return: print the number of elements in the list
