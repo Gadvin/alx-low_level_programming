@@ -6,6 +6,7 @@
  * print_listint - function to print all elements of a list
  * @h: head of the linked list
  *
+ * Description: function to print all elements of a list
  * Return: the number of nodes
  */
 

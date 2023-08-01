@@ -7,6 +7,7 @@
  * @head: Heah of the linked list
  * @n: Inter value to be added
  *
+ * Description: Function to add node at the begining
  * Return: address of the new element
  */
 
@@ -16,7 +17,7 @@ listint_t *add_nodeint(listint_t **head, const int n)
 
 	if (current == 0)
 		return  (NULL);
-	
+
 	current->n = n;
 	current->next = *head;
 	*head = current;

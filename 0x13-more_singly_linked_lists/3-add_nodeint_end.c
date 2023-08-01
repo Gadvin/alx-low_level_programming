@@ -7,6 +7,8 @@
  * @head: head of the linked list
  * @n: interger to add
  *
+ * Description: function to add a node at the end
+ *
  * Return: an address to the new elements or Null if it fails
  */
 

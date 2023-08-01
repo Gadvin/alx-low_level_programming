@@ -6,6 +6,7 @@
  * free_listint - frees a linked list
  * @head: head of the linked list
  *
+ * Description: frees a linked list
  * Return: Nothing
  */
 

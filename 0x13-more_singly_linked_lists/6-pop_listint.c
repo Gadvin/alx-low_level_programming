@@ -7,6 +7,7 @@
  * pop_listint - function to delete the head node of a linked list
  * @head: pointer to the first element in the linked list
  *
+ * Description: function to delete the head node of a linked list
  * Return: the data deleted, or 0there is no data
  */
 

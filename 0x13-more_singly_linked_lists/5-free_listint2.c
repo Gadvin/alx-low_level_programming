@@ -6,6 +6,7 @@
  * free_listint2- function to free a linked list header
  * @head: head of the linked list
  *
+ * Description: function to free a linked list header
  * Return: Nothing
  */
 
