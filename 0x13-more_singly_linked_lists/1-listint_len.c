@@ -6,7 +6,8 @@
  * listint_len - function to return the number of elements in a list
  * @h: head of the linked list
  *
- * Retuen: number of elements
+ * Description: function to return the number of elements in a list
+ * Return: number of elements
  */
 
 size_t listint_len(const listint_t *h)
