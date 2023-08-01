@@ -5,6 +5,7 @@
 /**
  * add_nodeint_end - function to add a node at the end
  * @head: head of the linked list
+ * @n: interger to add
  *
  * Return: an address to the new elements or Null if it fails
  */
@@ -16,9 +17,9 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 
 	current_node->n = n;
 	current_node->next = NULL;
-	
+
 	if (current_node == NULL)
-		return NULL;
+		return (NULL);
 
 	if (*head == NULL)
 	{
@@ -32,6 +33,6 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 
 	lastnode->next = current_node;
 
-	return current_node;
+	return (current_node);
 }
 
