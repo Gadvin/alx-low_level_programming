@@ -7,7 +7,7 @@
  * @head: address of the head
  * @idx: index for the new node
  * @n: the data to insert
- * 
+ *
  * Description: function to insert a new node to a linked list
  * Return: pointer for the new node, or NULL
  */
