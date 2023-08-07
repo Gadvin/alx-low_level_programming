@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * append_text_to_file - function to append text at the end 
+ * append_text_to_file - function to append text at the end
  * @filename: address to the name of the file created
  * @text_content: Address to string
  *
- * Description: function to append text at the end 
+ * Description: function to append text at the end
  * Return: 1 for success and -1 for fails
  */
 
