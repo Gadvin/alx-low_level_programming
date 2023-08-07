@@ -1,15 +1,15 @@
 #include "main.h"
 
 /**
- * create_file - function to create a file
+ * append_text_to_file - function to append text at the end 
  * @filename: address to the name of the file created
  * @text_content: Address to string
  *
- * Description: function to create a file
+ * Description: function to append text at the end 
  * Return: 1 for success and -1 for fails
  */
 
-int create_file(const char *filename, char *text_content)
+int append_text_to_file(const char *filename, char *text_content)
 {
 	int file = 0;
 	int wr = 0;
@@ -24,7 +24,7 @@ int create_file(const char *filename, char *text_content)
 			length++;
 	}
 
-	file = open(filename, O_CREAT | O_RDWR | O_TRUNC);
+	file = open(filename, O_WRONLY | O_APPEND);
 
 	wr = write(file, text_content, length);
 
