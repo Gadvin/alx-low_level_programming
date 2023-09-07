@@ -16,9 +16,6 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	size_t bytesRead;
 	size_t bytesWritten;
 
-	if (filename == NULL)
-		return (0);
-
 	fp = fopen(filename, "r");
 
 	if (fp == NULL)
@@ -33,14 +30,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 
-	buffer[bytesRead] = '\0';
-
 	bytesWritten = fwrite(buffer, sizeof(char), bytesRead, stdout);
 
+	free(buffer);
 	fclose(fp);
-
-	if (bytesWritten != bytesRead)
-		return (0);
 
 	return (bytesWritten);
 }
