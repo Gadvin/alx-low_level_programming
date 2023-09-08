@@ -19,7 +19,7 @@ int openDestFile(const char *file_to);
  */
 int openSourceFile(const char *file_from)
 {
-	int fd_source = open(file_from, O_CREAT | O_WRONLY | O_TRUNC, 0664);
+	int fd_source = open(file_from, O_WRONLY, 0664);
 
 	if (fd_source == -1)
 	{
