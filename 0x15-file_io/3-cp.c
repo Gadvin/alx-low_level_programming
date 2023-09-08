@@ -19,7 +19,7 @@ int openDestFile(const char *file_to);
  */
 int openSourceFile(const char *file_from)
 {
-	int fd_source = open(file_from, O_RDONLY, 0664);
+	int fd_source = open(file_from, O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
 	if (fd_source == -1)
 	{
@@ -73,6 +73,7 @@ int main(int argc, char *argv[])
 	/* Open the source file for reading*/
 	fd_source = openSourceFile(file_from);
 	fd_dest = openDestFile(file_to);
+
 	/* Copy data from source to destination*/
 	while ((bytes_read = read(fd_source, buffer, BUFFER_SIZE)) > 0)
 	{
