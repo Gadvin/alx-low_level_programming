@@ -2,7 +2,7 @@
 
 /**
  * get_dnodeint_at_index - function to get a node at an index
- * 
+ *
  * @head: pointer to head of DLL
  * @index: index of node to look for
  *
